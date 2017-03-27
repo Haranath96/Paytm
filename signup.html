@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paytm-Sign Up</title>
+<link rel="icon" href="download.png" type="image/png">
+<link rel="stylesheet" href="signup.css">
+
+<!----------------------------------------THIS IS  script START------------------------------------------------------>
+<script language="JavaScript">
+
+function valid() {
+var x = document.getElementById('password').value;
+if (x.length<6 || x.length>15) {
+alert("Passord length must not be less than 6 and greater than 12");
+return false;
+}
+var y = document.getElementById('cnpassword').value;
+if(x!=y) {
+alert("Password and Confirm-password should be same");
+return false;
+}
+var z = document.getElementById('mobilenumber').value;
+if (z.length<10 || z.length>10) {
+alert("Mobile number must not be less than 10 and greater than 10");
+return false;
+}
+}
+
+</script>
+
+</head>
+
+
+<body>
+<center>
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" action="login.php" method="POST" onsubmit="return valid()">
+    <h3 style="color:#0080ff"> Sign Up</h3>
+      <input type="number" placeholder="Mobile Number" id="mobilenumber" name="mobilenumber"  minlength="10"  maxlength="10" required="required"/>
+      <input type="email" placeholder="Email ID (Optional)" name="email"/> 
+      
+      <input type="password" id="password" placeholder="Create password" name="password" required="required"/>
+      <input type="password" id="cnpassword" placeholder="Confirm password" name="cnpassword" required="required"/>
+      <button class="myButton">Create My Paytm Wallet</button>
+      <p style="font-size:70%;">By Signing Up you agree to our T&C and Privacy Policy.</p>
+      <p class="message">Login Here <a href="login.php">Login</a></p>
+    </form>
+  </div>
+</div></center>
+
+
+
+</body>
+</html>
+
+
